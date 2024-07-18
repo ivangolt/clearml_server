@@ -1,0 +1,18 @@
+default:
+  - _self_
+
+project:
+  name: "Toxic comments"
+
+
+dataset:
+  project: "Toxic comments"
+  name: "Raw data"
+  file: toxic_comments.csv
+
+params:
+  nrows: 50000
+  test_size: 0.2
+  max_features: 10000
+  random_state: 42
+  shuffle: True
