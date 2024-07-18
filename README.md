@@ -22,9 +22,9 @@ then add credential in clearML server cope credentials and after in local machin
 
 and then add credentials to clearml.conf:
 
-![](images/clearml init.png)
+![](images/clearml_init.png)
 
-2) using SaaS: use for this credentials from clerml from web and update or add new credentials in clearml.conf. [docs](https://clear.ml/docs/latest/docs/configs/clearml_conf/)
+2) using SaaS: use for this credentials from clerml from web and update or add new credentials in clearml.conf  [(docs)](https://clear.ml/docs/latest/docs/configs/clearml_conf/)
 
 To authorize on the SaaS platform, you need to get secrets in the settings of your personal profile, and then add them to the environment in any convenient way. Example for Windows Power Shell:
 
@@ -34,12 +34,6 @@ To authorize on the SaaS platform, you need to get secrets in the settings of yo
 `$env:CLEARML_API_ACCESS_KEY="XXXXXXXXXXXXXXXX"`\
 `$env:CLEARML_API_SECRET_KEY="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"`
 
-
-Uploading the dataset to the **ClearML** cloud with parameters that will then be used in the notebook:
-
-`clearml-data create --project "Toxic comments" --name "Raw data"`\
-`clearml-data add --files data/train.csv`\
-`clearml-data close`
 
 
 
@@ -56,11 +50,13 @@ This code create project and task in clearML server.
 if you want to create new task use new task name.
 
 
-2) Uploading the dataset to the ClearML cloud with parameters that will then be used in notebooks:
+2) Uploading the dataset to the **ClearML** cloud with parameters that will then be used in notebooks:
 
+```
 clearml-data create --project "project_name" --name "dataset_name"
 clearml-data add --files datad/train.csv
 clearml-data close
+```
 
 3) Download from cloud 
 
@@ -140,4 +136,4 @@ Also we can compare logged metrics:
 ![](images/metrics.png)
 
 and plots:
-![](images/ plots.png)
+![](images/plots.png)
